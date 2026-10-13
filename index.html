@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pharmavite OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=98" />
+</head>
+<body>
+  <header class="app-header">
+    <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="收起侧栏" aria-expanded="true">☰</button>
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <div>
+        <div class="brand-name">Pharmavite OS</div>
+        <div class="brand-sub">轻量版 CRM &amp; ERP</div>
+      </div>
+    </div>
+    <div class="topbar-search">
+      <input id="globalSearch" type="search" placeholder="搜索订单号 / SKU / 客户…" autocomplete="off" />
+    </div>
+    <div class="topbar-right">
+      <button class="icon-btn cal-btn" id="bellBtn" type="button" title="待办" aria-label="待办">
+        <span class="cal-ico" aria-hidden="true">
+          <span class="cal-head" id="calMonth">8月</span>
+          <span class="cal-day" id="calDay">30</span>
+        </span>
+      </button>
+      <div class="role-switch">
+        <b id="roleName">—</b>
+      </div>
+      <button class="btn ghost" type="button" id="logoutBtn">退出</button>
+    </div>
+  </header>
+
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <nav class="nav" id="nav"></nav>
+    </aside>
+    <div class="main">
+      <div class="crumb-bar">
+        <div class="crumb" id="crumb">经营驾驶舱</div>
+      </div>
+      <main class="view" id="view"></main>
+    </div>
+  </div>
+
+  <div class="drawer-mask" id="drawerMask" hidden></div>
+  <aside class="drawer" id="drawer" hidden></aside>
+  <div class="toast-wrap" id="toasts"></div>
+  <div class="bell-panel" id="bellPanel" hidden></div>
+  <div class="login-gate" id="loginGate">
+    <div class="login-wash" aria-hidden="true">
+      <span class="login-geo login-geo-a"></span>
+      <span class="login-geo login-geo-b"></span>
+      <span class="login-mark">
+        <span class="login-orb"></span>
+        <span class="login-orb-dot"></span>
+      </span>
+      <p class="login-slogan">Pharmavite OS<br />from lead to cash</p>
+    </div>
+    <div class="login-card">
+      <div class="login-brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div>
+          <div class="brand-name">Pharmavite OS</div>
+          <div class="brand-sub">Healthcare ERP</div>
+        </div>
+      </div>
+      <form id="loginForm" class="form-grid">
+        <label>账号<input name="user" autocomplete="username" placeholder="executive / marketing / sales / supply / finance" required /></label>
+        <label>密码<input name="pass" type="password" autocomplete="current-password" placeholder="演示密码 123456" required /></label>
+        <button class="btn" type="submit">进入系统</button>
+      </form>
+    </div>
+  </div>
+  <div class="confirm-mask" id="confirmMask" hidden>
+    <div class="confirm-box">
+      <p id="confirmText">确认执行该操作？</p>
+      <div class="actions">
+        <button class="btn ghost" type="button" id="confirmNo">取消</button>
+        <button class="btn" type="button" id="confirmYes">确认</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js?v=98"></script>
+  <script src="js/ask.js?v=98"></script>
+  <script src="js/app.js?v=98"></script>
+</body>
+</html>
